@@ -1,0 +1,22 @@
+.keyboard-key {
+    border-style: none;
+    background-color: paleturquoise;
+    width: 5vw;
+    height: 5vw;
+    align-items: center;
+    font-size: 3vw;
+    margin: 0.5%;
+}
+
+.keyboard-key:hover {
+    background-color: grey;
+}
+
+.used {
+    background-color: lightgray;
+    opacity: 30%;
+}
+
+#keyboard {
+   text-align: center;
+}

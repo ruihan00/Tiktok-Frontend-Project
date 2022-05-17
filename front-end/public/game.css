@@ -1,0 +1,23 @@
+.blank {
+    border: 10px;
+    border: solid;
+    width: 8vw;
+    height: 8vw;
+    font-size: 5vw;
+    margin: 1%;
+    text-align: center;
+}
+
+.blankLetter {
+    display: inline-block;
+    margin: 0.8vw 0 0 0;
+}
+
+
+#blanks-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 5% 0 15% 0;
+}
+
