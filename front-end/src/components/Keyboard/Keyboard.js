@@ -6,7 +6,7 @@ const keyboard_layout = [["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"],
 function Keyboard(props) {
     return (
         <div id="keyboard">
-            {keyboard_layout.map((row) => <div>{row.map((key) => <Key name = {key} checkGuess = {props.checkGuess}></Key>)}</div>)}
+            {keyboard_layout.map((row) => <div>{row.map((key) => <Key name = {key} checkGuess = {props.checkGuess} playable = {props.playable}></Key>)}</div>)}
         </div>
     )
 }

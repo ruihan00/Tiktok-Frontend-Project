@@ -1,21 +1,21 @@
 .keyboard-key {
     border-style: none;
     background-color: paleturquoise;
-    width: 5vw;
-    height: 5vw;
+    width: 6vw;
+    height: 6vw;
     align-items: center;
     font-size: 3vw;
-    margin: 0.5%;
+    margin: 1%;
 }
 
-.keyboard-key:hover {
+.keyboard-key:enabled:hover {
     background-color: grey;
 }
 
-.used {
-    background-color: lightgray;
-    opacity: 30%;
+.keyboard-key:disabled {
+    background-color: rgba(0,0,0,0.1);
 }
+
 
 #keyboard {
    text-align: center;

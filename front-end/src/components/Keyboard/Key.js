@@ -1,13 +1,14 @@
-import React from "react";
-
+import React, {useState} from "react";
+import $ from "jquery"
 function Key(props) {
     const handleClick = (event) => {
-        event.target.classList.add("used")
+        $("#" + props.name).prop("disabled", true)
         props.checkGuess(props.name)
         
     }
+
     return (
-        <button onClick={handleClick} className="keyboard-key">
+        <button id = {props.name}  onClick={handleClick} className="keyboard-key">
             {props.name}
         </button>
     )
