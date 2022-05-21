@@ -14,7 +14,7 @@ function Game() {
     }
 
     function resetGame() {
-        setguess(Array.from(word, x=> ""))
+        setguess(Array.from(word, x => x != " " ? "_": "-"))
         setlives(totalLives)
         setplayable(true);
         $(".keyboard-key").toggleClass("used")
@@ -25,10 +25,10 @@ function Game() {
         $("#" + event.key.toLowerCase()).trigger("click")
     }
 
-    const word = "singapore";
+    const word = "santa monica";
     const wordList = word.split("");
     const [lives, setlives] = useState(totalLives);
-    const [guess, setguess] = useState(Array.from(word, x => ""))
+    const [guess, setguess] = useState(Array.from(word, x => x != " " ? "_": "-"))
     const [playable, setplayable] = useState(true);
 
 
@@ -62,9 +62,15 @@ function Game() {
         
         <div>
             {playable ? "" : <Notification resetGame = {resetGame}/>}
-            <div>
-            <button onClick={() => routeChange("/")}>Home</button>
-            <button onClick={() => routeChange("/settings")}>Settings</button>
+            <h1 id = "title">HANGMAN</h1>
+            <div className='container'>
+            <div id='nav'>
+                <button className='nav-btn' onClick={() => routeChange("/")}><i class="fa-solid fa-house"></i></button>
+                <button className='nav-btn' onClick={() => routeChange("/settings")}><i class="fa-solid fa-gear"></i></button>
+                <button className='nav-btn'> <i class="fa-solid fa-question"></i> </button>
+            </div>
+            <hr/>
+
             <BlanksArea word={guess} />
             <Keyboard checkGuess={checkGuess} playable = {playable}/>
             </div>

@@ -6,10 +6,11 @@
     align-items: center;
     font-size: 3vw;
     margin: 1%;
+    opacity: 70%;
 }
 
 .keyboard-key:enabled:hover {
-    background-color: grey;
+    opacity: 100%;
 }
 
 .keyboard-key:disabled {
@@ -19,4 +20,7 @@
 
 #keyboard {
    text-align: center;
+   justify-content: center;
+   flex-grow: 0.5;
+   align-items: center;
 }
