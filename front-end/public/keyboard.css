@@ -6,11 +6,11 @@
     align-items: center;
     font-size: 3vw;
     margin: 1%;
-    opacity: 70%;
+    opacity: 50%;
 }
 
 .keyboard-key:enabled:hover {
-    opacity: 100%;
+    opacity: 70%;
 }
 
 .keyboard-key:disabled {
