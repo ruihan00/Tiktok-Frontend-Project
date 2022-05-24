@@ -1,5 +1,7 @@
 import React, {useState} from "react";
 import { useNavigate } from "react-router-dom";
+import "../components/home.css";
+
 function Home() {
     //Routing function
     let navigate = useNavigate();
@@ -10,9 +12,9 @@ function Home() {
     
     return (
         <div>
-            <h1>This is Home page</h1>
-            <button onClick={() => routeChange("/settings")}>Settings</button>
-            <button onClick={() => routeChange("/game")}>Game</button>
+            <h1>Hangman – Home Page</h1>
+            <button id="play" onClick={() => routeChange("/game")}>Play</button>
+            <button id="settings" onClick={() => routeChange("/settings")}>Settings</button>
         </div>
     )
 }
