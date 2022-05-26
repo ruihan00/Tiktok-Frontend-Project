@@ -1,17 +1,11 @@
 import React, { useState, useEffect } from 'react'; // CHANGED THIS
-import { useNavigate } from "react-router-dom";
-import Keyboard from "../components/Keyboard/Keyboard";
+import Keyboard from "../components/Game/Keyboard/Keyboard";
 import BlanksArea from "../components/Game/BlanksArea";
-import Notification from '../components/Notification/Notification';
+import {Gameover, Win, Instructions} from "../components/Notification/Notification"
 import $ from "jquery";
-
-function Game() {
+import Navbar from '../components/Nav/Navbar';
+function Game(props) {
     const totalLives = 5;
-    let navigate = useNavigate();
-    function routeChange(path) {
-        console.log(path)
-        navigate(path);
-    }
 
     function resetGame() {
         setguess(Array.from(word, x => x != " " ? "_": "-"))
@@ -32,10 +26,10 @@ function Game() {
     const [playable, setplayable] = useState(true);
 
 
-
     // let wrong = 0; // Put this in
 
     function checkGuess(letterGuess) {
+        console.log(lives)
         if (word.includes(letterGuess)) { // Edited
             let temp = guess.splice(0, guess.length);
             for (let i = 0; i < wordList.length; i++) {
@@ -44,12 +38,15 @@ function Game() {
                 }
             }
             setguess(temp)
-            
+            if (!temp.includes("_")) {
+                setplayable(false)
+            }
         }
         //I AM EDITING THIS PART 
         else {
-            setlives(lives - 1);
-            if (lives == 0) {
+            const newLives = lives - 1;
+            setlives(newLives);
+            if (newLives == 0) {
                 setplayable(false);
                 $(".keyboard-key").prop("disabled", true)
             }
@@ -59,22 +56,17 @@ function Game() {
 
     document.addEventListener("keypress", handleKeyPress);
     return (
-        
         <div>
-            {playable ? "" : <Notification resetGame = {resetGame}/>}
-            <h1 id = "title">HANGMAN</h1>
+            {!playable && lives <= 0 ? <Gameover resetGame = {resetGame}/>: "" }
+            {!playable && lives > 0 ? <Win resetGame = {resetGame}/> : ""}
+            <Instructions/>
+            <h1 id = "title">{props.settings["category"]}</h1>
             <div className='container'>
-            <div id='nav'>
-                <button className='nav-btn' onClick={() => routeChange("/")}><i class="fa-solid fa-house"></i></button>
-                <button className='nav-btn' onClick={() => routeChange("/settings")}><i class="fa-solid fa-gear"></i></button>
-                <button className='nav-btn'> <i class="fa-solid fa-question"></i> </button>
-            </div>
+            <Navbar auth ={props.settings["auth"]}/>
             <hr/>
-
             <BlanksArea word={guess} />
             <Keyboard checkGuess={checkGuess} playable = {playable}/>
             </div>
-
         </div>)
 }
 

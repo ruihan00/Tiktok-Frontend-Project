@@ -1,5 +1,6 @@
 body,html,p {
     margin: 0;
+    font-family: "Londrina Solid";
 }
 
   
@@ -31,34 +32,13 @@ hr {
     height: 100vh;
 }
 
-#nav {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: end;
-    gap: 10px;
-    margin: 15px 2vw;
-}
 
-.nav-btn {
-    border-radius: 50%;
-    font-size: 2vw;
-    padding: 5px;
-    opacity: 70%;
-    width: 3.5vw;
-    height: 3.5vw;
-}
-
-.nav-btn:hover{
-    opacity: 100%;
-    
-}
 
 #title {
     position: absolute;
-    font-size: 2rem;
+    font-size: 2.5vw;
     text-align: center;
     width: 100%;
-    padding-top: 3px;
     z-index: -1;
     
 }
@@ -80,68 +60,3 @@ hr {
 }
 
 
-.notification {
-    display: flex;
-    position: absolute;
-    background-color: rgba(0,0,0,0.5);
-    width: 100%;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-    z-index: 1;
-}
-
-.notification-content {
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-    background-color: rgba(255,255,255,0.8);
-    width: 70%;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
-#game-over {
-    font-size: 10rem;
-    margin: 10vh 0;
-    flex-grow: 1;
-}
-
-#play-again-btn {
-    background-color: white;
-    border: 2px solid black;
-    margin-bottom: 5vh;
-    font-size: 3rem;
-    border-radius: 8px;
-    width: 50%;
-    padding: 0.5vh;
-
-}
-
-#play-again-btn:hover {
-    background-color: black;
-    color: white;
-    
-}
-
-#notification-btns {
-    display: flex;
-    flex-direction: row;
-    gap: 1vw;
-    padding: 1vw 10vw;
-}
-
-#home-btn {
-    background-color: white;
-    border: 2px solid black;
-    margin-bottom: 5vh;
-    font-size: 3rem;
-    border-radius: 8px;
-
-    width: 50%;
-    padding: 0.5vh;
-}
-#home-btn:hover {
-    background-color: black;
-    color:white;
-}

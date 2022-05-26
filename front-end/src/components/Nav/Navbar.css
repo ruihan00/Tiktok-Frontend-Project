@@ -1,0 +1,21 @@
+#nav {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: end;
+    gap: 10px;
+    margin: 15px 2vw;
+}
+
+.nav-btn {
+    border-radius: 50%;
+    font-size: 2vw;
+    padding: 5px;
+    opacity: 70%;
+    width: 3.5vw;
+    height: 3.5vw;
+}
+
+.nav-btn:hover{
+    opacity: 100%;
+    
+}

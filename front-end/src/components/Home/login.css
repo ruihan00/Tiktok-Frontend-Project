@@ -1,0 +1,98 @@
+.form-name {
+    font-size: 1.5vw;
+    width: 15%;
+}
+
+#popup-title {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5vw;
+ 
+}
+
+.form-input {
+    background: transparent;
+    border: 2px solid black;
+    border-radius: 8px;
+    font-size: 1.5vw;
+    width: 8vw;
+}
+
+.form-var {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#form-submit {
+    background-color: rgba(255,255,255,0);
+    border: 3px solid #000;
+    color: #000;
+    font-size: 25px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    display: block;
+    margin: 0 auto;
+    font-family: "Londrina Solid";
+    
+}
+
+#form-submit:hover {
+    background-color: #fff;
+    color: #000;
+    border: 3px solid #fff;
+    transition: all 0.3s ease 0s;
+}
+
+
+#popup-content {
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 40%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 10px 3vh;
+    gap: 10vh;
+}
+
+
+.popup-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+
+.popup {
+    display: flex;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    visibility: hidden;
+}
+
+#popup-close {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin: 5px 15px 40;
+}
+
+#popup-close-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+}
+
+#register-popup {
+    visibility: hidden;
+}

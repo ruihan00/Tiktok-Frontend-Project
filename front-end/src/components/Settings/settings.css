@@ -1,0 +1,31 @@
+#settings {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2vh;
+}
+
+#settings-title {
+    font-family: "Londrina Solid";
+    font-size: 4vw;
+}
+
+.category-btn {
+    background-color: rgba(255,255,255,0);
+    border: 3px solid #000;
+    color: #000;
+    font-size: 2vw;
+    padding: 10px 20px;
+    border-radius: 30px;
+    display: block;
+    margin: 0 auto;
+    font-family: "Londrina Solid";
+    width: 12vw;
+}
+
+.category-btn:hover {
+    background-color: #fff;
+    color: #000;
+    border: 3px solid #fff;
+    transition: all 0.3s ease 0s;
+}
