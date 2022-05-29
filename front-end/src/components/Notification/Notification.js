@@ -14,6 +14,7 @@ export function Gameover(props) {
         <div className="notification">
             <div className="notification-content">
                 <p id="game-over">GAME OVER</p>
+                <p id="answer">{props.answer}</p>
                 <div id="notification-btns">
                     <button id="home-btn" onClick={() => routeChange("/settings")}>Categories</button>
                     <button id="play-again-btn" onClick={props.resetGame}>Play Again!</button>

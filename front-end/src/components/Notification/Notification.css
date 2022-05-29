@@ -21,10 +21,14 @@
 
 #game-over {
     font-size: 4vw;
-    margin: 10vh 0;
+    margin: 10vh 0 3vh;
     flex-grow: 1;
 }
 
+#answer {
+    font-size: 3vw;
+    margin: 3vh 0;
+}
 #play-again-btn {
     background-color: white;
     border: 2px solid black;

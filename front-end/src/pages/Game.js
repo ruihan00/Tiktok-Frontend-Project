@@ -33,7 +33,7 @@ function Game(props) {
         }
         const data = wordCollection[category]
         const rand = Math.floor(Math.random() * data.length)
-        const word = data[rand]
+        const word = data[rand].toLowerCase()
         if (word.length > 12) {
             return generateWord(category)
         }
@@ -77,7 +77,7 @@ function Game(props) {
     document.addEventListener("keypress", handleKeyPress);
     return (
         <div>
-            {!playable && lives <= 0 ? <Gameover resetGame = {resetGame}/>: "" }
+            {!playable && lives <= 0 ? <Gameover answer = {word} resetGame = {resetGame}/>: "" }
             {!playable && lives > 0 ? <Win resetGame = {resetGame}/> : ""}
             <Instructions/>
             <h1 id = "title">{props.settings["category"]}</h1>

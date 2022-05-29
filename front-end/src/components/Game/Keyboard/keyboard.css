@@ -28,9 +28,9 @@
 
 @media only screen and (max-width: 800px) {
     .keyboard-key {
-        width: 8vw;
+        width: 6vw;
         height: 8vw;
-        font-size: 5vw;
+        font-size: 4vw;
     }
 
 }
