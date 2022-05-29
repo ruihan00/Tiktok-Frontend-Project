@@ -20,8 +20,8 @@
 }
 
 #game-over {
-    font-size: 4vw;
-    margin: 10vh 0 3vh;
+    font-size: 5vw;
+    margin: 7vh 0 3vh;
     flex-grow: 1;
 }
 
@@ -33,9 +33,9 @@
     background-color: white;
     border: 2px solid black;
     margin-bottom: 5vh;
-    font-size: 2vw;
+    font-size: 2.5vw;
     border-radius: 8px;
-    width: 50%;
+    width: 60%;
     padding: 0.5vh;
     font-family: "Londrina Solid";
 
@@ -58,7 +58,7 @@
     background-color: white;
     border: 2px solid black;
     margin-bottom: 5vh;
-    font-size: 2vw;
+    font-size: 2.5vw;
     border-radius: 8px;
     width: 50%;
     font-family: "Londrina Solid";
@@ -91,11 +91,48 @@
     left: 50%;
     transform: translate(-50%, -50%);
     padding-top: 10px;
-    font-size: 2vw;
+    font-size: 4vw;
 }
 
 #instruction-content {
-    font-size: 1.5vw;
+    font-size: 2vw;
     padding: 0vh 5vw 2vh;
     text-align: left;
+}
+
+@media only screen and (max-width: 800px) {
+    .notification-content {
+        width: 85%;
+        
+    }
+
+    #game-over {
+        font-size: 9vw;
+    }
+
+    #answer {
+        font-size: 7vw;
+    }
+
+    #play-again-btn {
+        font-size: 5vw;
+    }
+
+    #home-btn {
+        font-size: 5vw;
+    }
+    #instruction-title {
+        font-size: 6vw;
+    }
+    
+    #instruction-content {
+        font-size: 4vw;
+        padding: 0vh 5vw 2vh;
+        text-align: left;
+    }
+
+    #instruction-btn {
+        font-size: 2rem;
+    }
+
 }
