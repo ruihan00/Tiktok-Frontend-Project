@@ -15,7 +15,7 @@ export function Gameover(props) {
             <div className="notification-content">
                 <p id="game-over">GAME OVER</p>
                 <div id="notification-btns">
-                    <button id="home-btn" onClick={() => routeChange("/settings")}>Home</button>
+                    <button id="home-btn" onClick={() => routeChange("/settings")}>Categories</button>
                     <button id="play-again-btn" onClick={props.resetGame}>Play Again!</button>
                 </div>
             </div>
@@ -34,7 +34,7 @@ export function Win(props) {
             <div className="notification-content">
                 <p id="game-over">YOU WIN!</p>
                 <div id="notification-btns">
-                    <button id="home-btn" onClick={() => routeChange("/settings")}>Home</button>
+                    <button id="home-btn" onClick={() => routeChange("/settings")}>Categories</button>
                     <button id="play-again-btn" onClick={props.resetGame}>Play Again!</button>
                 </div>
             </div>
@@ -61,6 +61,7 @@ export function Instructions(props) {
                     <li>Use the letter to guess a letter you think is in the word(better to start with vowels).</li>
                     <li>Each time your chosen letter isn't in the word a part of a hanging man is formed.</li>
                     <li>Try to guess the word before the hanging man gets his whole body, if the hangman is formed then it is GAME OVER.</li>
+                    <li>You have 9 lives!</li>
                     <li>Most importantly, ENJOY!</li>
                 </ol>
             </div>

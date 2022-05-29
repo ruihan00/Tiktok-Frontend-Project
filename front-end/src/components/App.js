@@ -14,7 +14,7 @@ function App() {
     return (        
         <Router>
             <Routes>
-                <Route path='/Home' element={<Home settings = {settings} setSettings = {setSettings}/>} />
+                <Route path='/' element={<Home settings = {settings} setSettings = {setSettings}/>} />
                 <Route path='/Settings' element={<Settings settings = {settings} setSettings = {setSettings} />} />
                 <Route path='/Game' element={<Game settings = {settings} setSettings = {setSettings}/>} />
             </Routes>

@@ -1,11 +1,11 @@
 .keyboard-key {
     border-style: none;
     background-color: paleturquoise;
-    width: 6vw;
-    height: 6vw;
+    width: 5vw;
+    height: 5vw;
     align-items: center;
-    font-size: 3vw;
-    margin: 1%;
+    font-size: 2.5vw;
+    margin: 0.5%;
     opacity: 50%;
     font-family: "Londrina Solid";
 }
@@ -24,4 +24,13 @@
    justify-content: center;
    flex-grow: 0.5;
    align-items: center;
+}
+
+@media only screen and (max-width: 800px) {
+    .keyboard-key {
+        width: 8vw;
+        height: 8vw;
+        font-size: 5vw;
+    }
+
 }

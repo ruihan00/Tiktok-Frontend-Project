@@ -20,7 +20,17 @@
     display: block;
     margin: 0 auto;
     font-family: "Londrina Solid";
-    width: 12vw;
+    width: 15vw;
+}
+@media only screen and (max-width: 800px) {
+    #settings-title {
+        font-size: 2rem;
+    }
+    .category-btn {
+        width: 50vw;
+        font-size: 1.5rem;
+    }
+
 }
 
 .category-btn:hover {

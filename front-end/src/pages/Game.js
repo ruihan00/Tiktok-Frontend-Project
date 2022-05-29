@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react'; // CHANGED THIS
 import Keyboard from "../components/Game/Keyboard/Keyboard";
 import BlanksArea from "../components/Game/BlanksArea";
+import "../components/Game/game.css"
 import {Gameover, Win, Instructions} from "../components/Notification/Notification"
 import $ from "jquery";
 import Navbar from '../components/Nav/Navbar';
+import {wordCollection} from '../components/words/overallWords';
+import {hangman_img} from "../components/Kermit hangman/hangman_img"
 function Game(props) {
-    const totalLives = 5;
+    const totalLives = 9;
 
     function resetGame() {
         setguess(Array.from(word, x => x != " " ? "_": "-"))
@@ -13,13 +16,30 @@ function Game(props) {
         setplayable(true);
         $(".keyboard-key").toggleClass("used")
         $(".keyboard-key").prop("disabled", false)
+        setWord(generateWord(props.settings["category"]))
     }
 
     function handleKeyPress(event) {
         $("#" + event.key.toLowerCase()).trigger("click")
     }
+    const [word, setWord] = useState(generateWord(props.settings['category']))
+    
 
-    const word = "santa monica";
+    function generateWord(category) {
+        if (category == "Random") {
+            const possible = ["Occupations", "Countries", "Capitals", "Animals", "Movies", "Brands"]
+            category = possible[Math.floor(Math.random() * possible.length)]
+
+        }
+        const data = wordCollection[category]
+        const rand = Math.floor(Math.random() * data.length)
+        const word = data[rand]
+        if (word.length > 12) {
+            return generateWord(category)
+        }
+        return word
+    }
+
     const wordList = word.split("");
     const [lives, setlives] = useState(totalLives);
     const [guess, setguess] = useState(Array.from(word, x => x != " " ? "_": "-"))
@@ -64,6 +84,10 @@ function Game(props) {
             <div className='container'>
             <Navbar auth ={props.settings["auth"]}/>
             <hr/>
+            <div id='hangman-img-container'>
+                <img id='hangman-img' src={hangman_img[lives]}/>
+
+            </div>
             <BlanksArea word={guess} />
             <Keyboard checkGuess={checkGuess} playable = {playable}/>
             </div>

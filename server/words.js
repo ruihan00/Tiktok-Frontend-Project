@@ -1,0 +1,1 @@
+exports.generateWord = async(req, res, next) => "abc"

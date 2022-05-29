@@ -19,3 +19,13 @@
     opacity: 100%;
     
 }
+
+@media only screen and (max-width: 800px) {
+    .nav-btn {
+        font-size: 5vw;
+        width: 8vw;
+        height: 8vw;
+
+    }
+
+}

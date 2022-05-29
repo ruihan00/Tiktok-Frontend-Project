@@ -19,8 +19,8 @@
 	border: 2;
 	outline: none;
 	cursor: pointer;
-	font-size: 50px;
-	font-weight: 800;
+	font-size: 4vw;
+	font-weight: 600;
 	border-radius: 30px;
 	margin-bottom: 10px;
 }
@@ -36,7 +36,7 @@
     display: block;
     margin: 0 auto;
     font-family: "Londrina Solid";
-    width: 15%;
+    /* width: 15%; */
     align-items: center;
 }
 
@@ -46,4 +46,13 @@
     border: 3px solid #fff;
     transition: all 0.3s ease 0s;
 }
+
+
+@media only screen and (max-width: 800px) {
+    #game-title {
+        font-size: 20vw;
+    }
+
+}
+
 

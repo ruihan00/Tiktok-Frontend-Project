@@ -33,14 +33,14 @@ function Home(props) {
             <Navbar auth={props.settings["auth"]} />
             <Instructions />
             <h1 id="game-title">HANGMAN</h1>
-            <Login handleAuth={handleAuth} routeChange={routeChange} />
+            {/* <Login handleAuth={handleAuth} routeChange={routeChange} />
             <Register handleAuth={handleAuth} routeChange={routeChange} />
-            <button type="submit" className="home-btn" id="play" onClick={handleLogin}>Login</button>
-            <button className="home-btn" id="settings" onClick={handleRegister}>Register</button>
-            <button className="home-btn" id="settings" onClick={() => {
+            <button type="submit" className="home-btn" id="play" onClick={handleLogin}>Play</button>
+            <button className="home-btn" id="settings" onClick={handleRegister}>Register</button> */}
+            <button className="home-btn" id="play" onClick={() => {
                 handleAuth();
                 routeChange("/settings")
-            }}>Continue as Guest</button>
+            }}>Play</button>
         </div>
     )
 }
